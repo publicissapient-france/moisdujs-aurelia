@@ -1,6 +1,8 @@
 <template>
-  <h4>${data.theme}</h4>
-  <div repeat.for="slot of data.slots">
-    ${slot.title}
-  </div>
+    <require from="../x-slot/x-slot"></require>
+
+    <h4>${data.theme}</h4>
+    <div repeat.for="slot of data.slots">
+        <x-slot title.bind="slot.title" speaker.bind="slot.speaker"></x-slot>
+    </div>
 </template>
