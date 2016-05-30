@@ -1,7 +1,7 @@
 //import {computedFrom} from 'aurelia-framework';
-import './x-slot-grid.css'
+import './slot-grid.css'
 import {bindable} from 'aurelia-framework';
 
-export class XSlotGrid {
+export class SlotGrid {
     @bindable grid
 }

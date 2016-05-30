@@ -2,28 +2,21 @@
  * Created by albandauleu on 26/05/2016.
  */
 export class Grid {
-    columns = [];
-    themes = [];
+    events = [];
+    eventTitles = [];
 
-    constructor(columns) {
-        this.columns = columns;
-        this.themes = this.columns.map(column => column.theme);
+    constructor(events) {
+        this.events = events;
+        this.eventTitles = this.events.map(event => event.title);
     }
 
     addSlot(slot) {
-        let found = this.columns.filter(column => column.theme === slot.theme);
+        let found = this.events.filter(event => event.title === slot.eventTitle);
         if (found.length) {
-            found[0].slots.push({title: slot.title});
+            found[0].slots.push({
+                title: slot.title,
+                speaker: slot.speaker
+            });
         }
     }
-}
-
-export class Slot {
-    theme = '';
-    title = '';
-}
-
-export class SlotColumn {
-    theme = '';
-    slots = [];
 }

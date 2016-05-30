@@ -1,0 +1,9 @@
+<template>
+    <require from="../event/event"></require>
+    <h2>Programme</h2>
+
+    <event repeat.for="event of grid.events"
+           title.bind="event.title"
+           slots.bind="event.slots"></event>
+
+</template>

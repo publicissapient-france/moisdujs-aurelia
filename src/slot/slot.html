@@ -1,0 +1,8 @@
+<template>
+    <p>
+        ${title}
+        <span if.bind="speaker"> (by ${speaker})</span>
+    </p>
+</template>
+
+<slot repeat.for="slot in slots"></slot>

@@ -1,0 +1,6 @@
+<template>
+    <require from="../slot/slot"></require>
+
+    <h4>${title}</h4>
+    <slot repeat.for="slot of slots" title.bind="slot.title" speaker.bind="slot.speaker"></slot>
+</template>

@@ -1,6 +1,7 @@
 import {bindable} from 'aurelia-framework';
 
-export class XSlot {
+export class Slot {
     @bindable title;
     @bindable speaker;
+    @bindable eventTitle;
 }
