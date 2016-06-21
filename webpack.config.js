@@ -17,7 +17,6 @@ var options = {
     },
     output: {
         path: path.join(__dirname, 'build'),
-        publicPath: 'build',
         filename: 'bundle.js'
     },
     plugins: [
